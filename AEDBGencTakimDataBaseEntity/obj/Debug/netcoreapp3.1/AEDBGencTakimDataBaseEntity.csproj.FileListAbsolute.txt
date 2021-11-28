@@ -1,0 +1,10 @@
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\bin\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.deps.json
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\bin\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.dll
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\bin\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.pdb
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\obj\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.csproj.AssemblyReference.cache
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\obj\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\obj\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.AssemblyInfoInputs.cache
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\obj\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.AssemblyInfo.cs
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\obj\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.csproj.CoreCompileInputs.cache
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\obj\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.dll
+C:\Users\hiicr\source\repos\AEDBGencTakimDataBaseEntity\obj\Debug\netcoreapp3.1\AEDBGencTakimDataBaseEntity.pdb

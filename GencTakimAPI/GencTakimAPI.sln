@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GencTakimAPI", "GencTakimAPI\GencTakimAPI.csproj", "{5F5878CB-ACEA-4886-9C51-0AD3B8C95F0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AEDBGencTakimDataBaseEntity", "..\AEDBGencTakimDataBaseEntity\AEDBGencTakimDataBaseEntity.csproj", "{601B56EF-94BF-49ED-95D7-365E50B27B4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F5878CB-ACEA-4886-9C51-0AD3B8C95F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5878CB-ACEA-4886-9C51-0AD3B8C95F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5878CB-ACEA-4886-9C51-0AD3B8C95F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5878CB-ACEA-4886-9C51-0AD3B8C95F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601B56EF-94BF-49ED-95D7-365E50B27B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601B56EF-94BF-49ED-95D7-365E50B27B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601B56EF-94BF-49ED-95D7-365E50B27B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601B56EF-94BF-49ED-95D7-365E50B27B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F24357DA-77D0-4179-AE19-3FF499CB4081}
+	EndGlobalSection
+EndGlobal
