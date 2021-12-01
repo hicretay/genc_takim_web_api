@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hiicr\\Desktop\\GencTakim\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj": {}
+    "C:\\Users\\hiicr\\Documents\\genc_takim_web_api\\genc_takim_web_api\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hiicr\\Desktop\\GencTakim\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj": {
+    "C:\\Users\\hiicr\\Documents\\genc_takim_web_api\\genc_takim_web_api\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hiicr\\Desktop\\GencTakim\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj",
+        "projectUniqueName": "C:\\Users\\hiicr\\Documents\\genc_takim_web_api\\genc_takim_web_api\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj",
         "projectName": "AEDBGencTakimDataBaseEntity",
-        "projectPath": "C:\\Users\\hiicr\\Desktop\\GencTakim\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj",
+        "projectPath": "C:\\Users\\hiicr\\Documents\\genc_takim_web_api\\genc_takim_web_api\\AEDBGencTakimDataBaseEntity\\AEDBGencTakimDataBaseEntity.csproj",
         "packagesPath": "C:\\Users\\hiicr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hiicr\\Desktop\\GencTakim\\AEDBGencTakimDataBaseEntity\\obj\\",
+        "outputPath": "C:\\Users\\hiicr\\Documents\\genc_takim_web_api\\genc_takim_web_api\\AEDBGencTakimDataBaseEntity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hiicr\\AppData\\Roaming\\NuGet\\NuGet.Config",

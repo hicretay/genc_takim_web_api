@@ -47,9 +47,9 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
            return new UserTblDAO().DataSource("select * from [UserTbl]"); // parametreye göre sorgu sonuna where cümlesi eklenir
         }
 
-        public UserTblDAO Select(string userEmail, string userPassword) 
+        public UserTblDAO Select(string userEmail, string userPassword)     
         {
-            return new UserTblDAO().Select("select * from [UserTbl] where userEmail=@userEmail and userPassword=@userPassword", new SqlParameter("@userEmail", userEmail), new SqlParameter("@userPassword", userPassword));
+            return new UserTblDAO().Select("select * from [UserTbl] where UserEmail=@userEmail and UserPassword=@userPassword", new SqlParameter("@userEmail", userEmail), new SqlParameter("@userPassword", userPassword));
         }
     }
 }

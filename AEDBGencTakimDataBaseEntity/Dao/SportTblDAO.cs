@@ -29,22 +29,22 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SportName != null)
                 {
-                    fieldsName += "sportName,";
-                    fieldsValue += "@sportName,";
+                    fieldsName += "SportName,";
+                    fieldsValue += "@SportName,";
                     paramsayi++;
                 }
 
                 if (MaxPlayerCount != null)
                 {
-                    fieldsName += "maxPlayerCount,";
-                    fieldsValue += "@maxPlayerCount,";
+                    fieldsName += "MaxPlayerCount,";
+                    fieldsValue += "@MaxPlayerCount,";
                     paramsayi++;
                 }
 
                 if (MaxSubstituteCount != null)
                 {
-                    fieldsName += "maxSubstituteCount,";
-                    fieldsValue += "@maxSubstituteCount,";
+                    fieldsName += "MaxSubstituteCount,";
+                    fieldsValue += "@MaxSubstituteCount,";
                     paramsayi++;
                 }
 
@@ -57,18 +57,18 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SportName != null)
                 {
-                    fieldsName += "sportName=@sportName,";
+                    fieldsName += "SportName=@SportName,";
                     paramsayi++;
                 }
                 if (MaxPlayerCount != null)
                 {
-                    fieldsName += "maxPlayerCount=@maxPlayerCount,";
+                    fieldsName += "MaxPlayerCount=@MaxPlayerCount,";
                     paramsayi++;
                 }
 
                 if (MaxSubstituteCount != null)
                 {
-                    fieldsName += "maxSubstituteCount=@maxSubstituteCount,";
+                    fieldsName += "MaxSubstituteCount=@MaxSubstituteCount,";
                     paramsayi++;
                 }
 
@@ -83,18 +83,18 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SportName != null)
                 {
-                    sqlparam[i] = new SqlParameter("@sportName", SportName);
+                    sqlparam[i] = new SqlParameter("@SportName", SportName);
                     i++;
                 }
                 if (MaxPlayerCount != null)
                 {
-                    sqlparam[i] = new SqlParameter("@maxPlayerCount", MaxPlayerCount);
+                    sqlparam[i] = new SqlParameter("@MaxPlayerCount", MaxPlayerCount);
                     i++;
                 }
 
                 if (MaxSubstituteCount != null)
                 {
-                    sqlparam[i] = new SqlParameter("@maxSubstituteCount", MaxSubstituteCount);
+                    sqlparam[i] = new SqlParameter("@MaxSubstituteCount", MaxSubstituteCount);
                     i++;
                 }
 
@@ -137,10 +137,10 @@ namespace AEDBGencTakimDataBaseEntity.DAO
 
             string[] columnNames = dt.Columns.Cast<DataColumn>().Select(x => x.ColumnName).ToArray();
 
-            if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(dt.Rows[0]["Id"].ToString());
-            if (columnNames.Contains("sportName")) entity.SportName = dt.Rows[0]["sportName"].ToString();
-            if (columnNames.Contains("maxPlayerCount")) entity.MaxPlayerCount = Int32.TryParse(dt.Rows[0]["maxPlayerCount"].ToString(), out ii) ? new int?(ii) : null;
-            if (columnNames.Contains("maxSubstituteCount")) entity.MaxSubstituteCount = Int32.TryParse(dt.Rows[0]["maxSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
+            if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(dt.Rows[0]["Id"].ToString());
+            if (columnNames.Contains("SportName")) entity.SportName = dt.Rows[0]["SportName"].ToString();
+            if (columnNames.Contains("MaxPlayerCount")) entity.MaxPlayerCount = Int32.TryParse(dt.Rows[0]["MaxPlayerCount"].ToString(), out ii) ? new int?(ii) : null;
+            if (columnNames.Contains("MaxSubstituteCount")) entity.MaxSubstituteCount = Int32.TryParse(dt.Rows[0]["MaxSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
 
             return entity;
         } // okuma işlemi bitiyor
@@ -161,10 +161,10 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 SportTblDAO entity = new SportTblDAO();
 
-                if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(r["id"].ToString());
-                if (columnNames.Contains("sportName")) entity.SportName = r["sportName"].ToString();
-                if (columnNames.Contains("maxPlayerCount")) entity.MaxPlayerCount = Int32.TryParse(r["maxPlayerCount"].ToString(), out ii) ? new int?(ii) : null;
-                if (columnNames.Contains("maxSubstituteCount")) entity.MaxSubstituteCount = Int32.TryParse(r["maxSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
+                if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(r["Id"].ToString());
+                if (columnNames.Contains("SportName")) entity.SportName = r["SportName"].ToString();
+                if (columnNames.Contains("MaxPlayerCount")) entity.MaxPlayerCount = Int32.TryParse(r["MaxPlayerCount"].ToString(), out ii) ? new int?(ii) : null;
+                if (columnNames.Contains("MaxSubstituteCount")) entity.MaxSubstituteCount = Int32.TryParse(r["MaxSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
 
                 list.Add(entity);
             }

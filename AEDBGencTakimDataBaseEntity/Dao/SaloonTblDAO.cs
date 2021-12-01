@@ -29,22 +29,22 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SaloonName != null)
                 {
-                    fieldsName += "saloonName,";
-                    fieldsValue += "@saloonName,";
+                    fieldsName += "SaloonName,";
+                    fieldsValue += "@SaloonName,";
                     paramsayi++;
                 }
 
                 if (SaloonFeature != null)
                 {
-                    fieldsName += "saloonFeature,";
-                    fieldsValue += "@saloonFeature,";
+                    fieldsName += "SaloonFeature,";
+                    fieldsValue += "@SaloonFeature,";
                     paramsayi++;
                 }
 
                 if (SaloonAddress != null)
                 {
-                    fieldsName += "saloonAddress,";
-                    fieldsValue += "@saloonAddress,";
+                    fieldsName += "SaloonAddress,";
+                    fieldsValue += "@SaloonAddress,";
                     paramsayi++;
                 }
 
@@ -57,18 +57,18 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SaloonName != null)
                 {
-                    fieldsName += "saloonName=@saloonName,";
+                    fieldsName += "SaloonName=@SaloonName,";
                     paramsayi++;
                 }
                 if (SaloonFeature != null)
                 {
-                    fieldsName += "saloonFeature=@saloonFeature,";
+                    fieldsName += "SaloonFeature=@SaloonFeature,";
                     paramsayi++;
                 }
 
                 if (SaloonAddress != null)
                 {
-                    fieldsName += "saloonAddress=@saloonAddress,";
+                    fieldsName += "SaloonAddress=@SaloonAddress,";
                     paramsayi++;
                 }
 
@@ -83,18 +83,18 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SaloonName != null)
                 {
-                    sqlparam[i] = new SqlParameter("@saloonName", SaloonName);
+                    sqlparam[i] = new SqlParameter("@SaloonName", SaloonName);
                     i++;
                 }
                 if (SaloonFeature != null)
                 {
-                    sqlparam[i] = new SqlParameter("@saloonFeature", SaloonFeature);
+                    sqlparam[i] = new SqlParameter("@SaloonFeature", SaloonFeature);
                     i++;
                 }
 
                 if (SaloonAddress != null)
                 {
-                    sqlparam[i] = new SqlParameter("@saloonAddress", SaloonAddress);
+                    sqlparam[i] = new SqlParameter("@SaloonAddress", SaloonAddress);
                     i++;
                 }
 
@@ -137,10 +137,10 @@ namespace AEDBGencTakimDataBaseEntity.DAO
 
             string[] columnNames = dt.Columns.Cast<DataColumn>().Select(x => x.ColumnName).ToArray();
 
-            if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(dt.Rows[0]["Id"].ToString());
-            if (columnNames.Contains("saloonName")) entity.SaloonName = dt.Rows[0]["saloonName"].ToString();
-            if (columnNames.Contains("saloonFeature")) entity.SaloonFeature = dt.Rows[0]["saloonFeature"].ToString();
-            if (columnNames.Contains("saloonAddress")) entity.SaloonAddress = dt.Rows[0]["saloonAddress"].ToString();
+            if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(dt.Rows[0]["Id"].ToString());
+            if (columnNames.Contains("SaloonName")) entity.SaloonName = dt.Rows[0]["SaloonName"].ToString();
+            if (columnNames.Contains("SaloonFeature")) entity.SaloonFeature = dt.Rows[0]["SaloonFeature"].ToString();
+            if (columnNames.Contains("SaloonAddress")) entity.SaloonAddress = dt.Rows[0]["SaloonAddress"].ToString();
 
             return entity;
         } // okuma işlemi bitiyor
@@ -161,10 +161,10 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 SaloonTblDAO entity = new SaloonTblDAO();
 
-                if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(r["id"].ToString());
-                if (columnNames.Contains("saloonName")) entity.SaloonName = r["saloonName"].ToString();
-                if (columnNames.Contains("saloonFeature")) entity.SaloonFeature = r["saloonFeature"].ToString();
-                if (columnNames.Contains("saloonAddress")) entity.SaloonAddress = r["saloonAddress"].ToString();
+                if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(r["Id"].ToString());
+                if (columnNames.Contains("SaloonName")) entity.SaloonName = r["SaloonName"].ToString();
+                if (columnNames.Contains("SaloonFeature")) entity.SaloonFeature = r["SaloonFeature"].ToString();
+                if (columnNames.Contains("SaloonAddress")) entity.SaloonAddress = r["SaloonAddress"].ToString();
 
                 list.Add(entity);
             }

@@ -11,22 +11,21 @@ namespace GencTakimAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserLoginController : ControllerBase
+    public class SportsListController : ControllerBase
     {
-        private readonly ILogger<UserLoginController> _logger;
+        private readonly ILogger<SportsListController> _logger;
 
-        public UserLoginController(ILogger<UserLoginController> logger)
+        public SportsListController(ILogger<SportsListController> logger)
         {
             _logger = logger;
         }
 
-
         [HttpPost]
-        public object PostUsers([FromBody] userLogin userLogin)
+        public object PostSports()       
         {
             try
             {
-                object userResult = new UserTbl().Select(userLogin.UserEmail, userLogin.UserPassword);
+                object userResult = new SportTbl().DataSource();
                 return userResult;
             }
             catch (Exception ex)

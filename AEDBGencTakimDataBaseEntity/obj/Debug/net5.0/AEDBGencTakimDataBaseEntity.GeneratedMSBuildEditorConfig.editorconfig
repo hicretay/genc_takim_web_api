@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = AEDBGencTakimDataBaseEntity
-build_property.ProjectDir = C:\Users\hiicr\Desktop\GencTakim\AEDBGencTakimDataBaseEntity\
+build_property.ProjectDir = C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\

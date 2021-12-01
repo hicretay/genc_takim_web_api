@@ -29,29 +29,29 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (UserId != null)
                 {
-                    fieldsName += "userId,";
-                    fieldsValue += "@userId,";
+                    fieldsName += "UserId,";
+                    fieldsValue += "@UserId,";
                     paramsayi++;
                 }
 
                 if (GameId != null)
                 {
-                    fieldsName += "gameId,";
-                    fieldsValue += "@gameId,";
+                    fieldsName += "GameId,";
+                    fieldsValue += "@GameId,";
                     paramsayi++;
                 }
 
                 if (GamePlayTime != null)
                 {
-                    fieldsName += "gamePlayTime,";
-                    fieldsValue += "@gamePlayTime,";
+                    fieldsName += "GamePlayTime,";
+                    fieldsValue += "@GamePlayTime,";
                     paramsayi++;
                 }
 
                 if (IsSubstitute != null)
                 {
-                    fieldsName += "isSubstitute,";
-                    fieldsValue += "@isSubstitute,";
+                    fieldsName += "IsSubstitute,";
+                    fieldsValue += "@IsSubstitute,";
                     paramsayi++;
                 }
 
@@ -64,24 +64,24 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (UserId != null)
                 {
-                    fieldsName += "userId=@userId,";
+                    fieldsName += "UserId=@UserId,";
                     paramsayi++;
                 }
                 if (GameId != null)
                 {
-                    fieldsName += "gameId=@gameId,";
+                    fieldsName += "GameId=@GameId,";
                     paramsayi++;
                 }
 
                 if (GamePlayTime != null)
                 {
-                    fieldsName += "gamePlayTime=@gamePlayTime,";
+                    fieldsName += "GamePlayTime=@GamePlayTime,";
                     paramsayi++;
                 }
 
                 if (IsSubstitute != null)
                 {
-                    fieldsName += "isSubstitute=@isSubstitute,";
+                    fieldsName += "IsSubstitute=@IsSubstitute,";
                     paramsayi++;
                 }
 
@@ -98,24 +98,24 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (UserId != null)
                 {
-                    sqlparam[i] = new SqlParameter("@userId", UserId);
+                    sqlparam[i] = new SqlParameter("@UserId", UserId);
                     i++;
                 }
                 if (GameId != null)
                 {
-                    sqlparam[i] = new SqlParameter("@gameId", GameId);
+                    sqlparam[i] = new SqlParameter("@GameId", GameId);
                     i++;
                 }
 
                 if (GamePlayTime != null)
                 {
-                    sqlparam[i] = new SqlParameter("@gamePlayTime", GamePlayTime);
+                    sqlparam[i] = new SqlParameter("@GamePlayTime", GamePlayTime);
                     i++;
                 }
 
                 if (IsSubstitute != null)
                 {
-                    sqlparam[i] = new SqlParameter("@isSubstitute", IsSubstitute);
+                    sqlparam[i] = new SqlParameter("@IsSubstitute", IsSubstitute);
                     i++;
                 }
 
@@ -158,11 +158,11 @@ namespace AEDBGencTakimDataBaseEntity.DAO
 
             string[] columnNames = dt.Columns.Cast<DataColumn>().Select(x => x.ColumnName).ToArray();
 
-            if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(dt.Rows[0]["id"].ToString());
-            if (columnNames.Contains("userId")) entity.UserId = Convert.ToInt32(dt.Rows[0]["userId"].ToString());
-            if (columnNames.Contains("gameId")) entity.GameId = Convert.ToInt32(dt.Rows[0]["gameId"].ToString());
-            if (columnNames.Contains("gamePlayTime")) entity.GamePlayTime = DateTime.TryParse(dt.Rows[0]["gamePlayTime"].ToString(), out dti) ? new DateTime?(dti) : null;
-            if (columnNames.Contains("isSubstitute")) entity.IsSubstitute = Boolean.TryParse(dt.Rows[0]["isSubstitute"].ToString(),out b)? new Boolean?(b):null;
+            if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(dt.Rows[0]["Id"].ToString());
+            if (columnNames.Contains("UserId")) entity.UserId = Convert.ToInt32(dt.Rows[0]["UserId"].ToString());
+            if (columnNames.Contains("GameId")) entity.GameId = Convert.ToInt32(dt.Rows[0]["GameId"].ToString());
+            if (columnNames.Contains("GamePlayTime")) entity.GamePlayTime = DateTime.TryParse(dt.Rows[0]["GamePlayTime"].ToString(), out dti) ? new DateTime?(dti) : null;
+            if (columnNames.Contains("IsSubstitute")) entity.IsSubstitute = Boolean.TryParse(dt.Rows[0]["IsSubstitute"].ToString(),out b)? new Boolean?(b):null;
 
             return entity;
         } // okuma işlemi bitiyor
@@ -183,11 +183,11 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 GameUserTblDAO entity = new GameUserTblDAO();
 
-                if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(r["id"].ToString());
-                if (columnNames.Contains("userId")) entity.UserId = Convert.ToInt32(r["userId"].ToString());
-                if (columnNames.Contains("gameId")) entity.GameId = Convert.ToInt32(r["gameId"].ToString());
-                if (columnNames.Contains("gamePlayTime")) entity.GamePlayTime = DateTime.TryParse(r["gamePlayTime"].ToString(), out dti) ? new DateTime?(dti) : null;
-                if (columnNames.Contains("isSubstitute")) entity.IsSubstitute = Boolean.TryParse(r["isSubstitute"].ToString(), out b) ? new Boolean?(b) : null;
+                if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(r["Id"].ToString());
+                if (columnNames.Contains("UserId")) entity.UserId = Convert.ToInt32(r["UserId"].ToString());
+                if (columnNames.Contains("GameId")) entity.GameId = Convert.ToInt32(r["GameId"].ToString());
+                if (columnNames.Contains("GamePlayTime")) entity.GamePlayTime = DateTime.TryParse(r["GamePlayTime"].ToString(), out dti) ? new DateTime?(dti) : null;
+                if (columnNames.Contains("IsSubstitute")) entity.IsSubstitute = Boolean.TryParse(r["IsSubstitute"].ToString(), out b) ? new Boolean?(b) : null;
 
                 list.Add(entity);
             }
