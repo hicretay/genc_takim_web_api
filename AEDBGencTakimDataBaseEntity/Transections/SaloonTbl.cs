@@ -37,12 +37,12 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
 
             }
         }
-        public SaloonTblDAO Select() // tüm spor salonlarının listelenmesi 
+        public SaloonTblDAO Select() 
         {
           return new SaloonTblDAO().Select("select * from [SaloonTbl]");
         }
 
-        public List<SaloonTblDAO> DataSource()
+        public List<SaloonTblDAO> DataSource() // tüm spor salonlarının listelenmesi 
         {
            return new SaloonTblDAO().DataSource("select * from [SaloonTbl]");
         }

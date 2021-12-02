@@ -1,5 +1,4 @@
 ﻿using AEDBGencTakimDataBaseEntity.Transactions;
-using GencTakimAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,22 +10,21 @@ namespace GencTakimAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserController : ControllerBase
+    public class SaloonListController : ControllerBase
     {
-        private readonly ILogger<UserController> _logger;
+        private readonly ILogger<SaloonListController> _logger;
 
-        public UserController(ILogger<UserController> logger)
+        public SaloonListController(ILogger<SaloonListController> logger)
         {
             _logger = logger;
         }
 
-
-        [HttpPost("Login")]
-        public object PostUsers([FromBody] userLogin userLogin)
+        [HttpPost]
+        public object PostSaloons() 
         {
             try
             {
-                object userResult = new UserTbl().Select(userLogin.UserEmail, userLogin.UserPassword);
+                object userResult = new SaloonTbl().DataSource();
                 return userResult;
             }
             catch (Exception ex)
