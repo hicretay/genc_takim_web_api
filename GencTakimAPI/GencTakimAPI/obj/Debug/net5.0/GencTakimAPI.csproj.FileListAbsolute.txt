@@ -71,3 +71,5 @@ C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\GencTakimAPI\Genc
 C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\GencTakimAPI\GencTakimAPI\obj\Debug\net5.0\scopedcss\bundle\GencTakimAPI.styles.css
 C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\GencTakimAPI\GencTakimAPI\obj\Debug\net5.0\GencTakimAPI.RazorTargetAssemblyInfo.cache
 C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\GencTakimAPI\GencTakimAPI\obj\Debug\net5.0\GencTakimAPI.genruntimeconfig.cache
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\GencTakimAPI\GencTakimAPI\obj\Debug\net5.0\GencTakimAPI.csproj.CopyComplete
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\GencTakimAPI\GencTakimAPI\bin\Debug\net5.0\web.config

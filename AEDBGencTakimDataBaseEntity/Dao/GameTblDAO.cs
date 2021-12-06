@@ -29,57 +29,57 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SportId != null)
                 {
-                    fieldsName += "sportId,";
-                    fieldsValue += "@sportId,";
+                    fieldsName += "SportId,";
+                    fieldsValue += "@SportId,";
                     paramsayi++;
                 }
 
                 if (UserId != null)
                 {
-                    fieldsName += "userId,";
-                    fieldsValue += "@userId,";
+                    fieldsName += "UserId,";
+                    fieldsValue += "@UserId,";
                     paramsayi++;
                 }
 
                 if (SaloonId != null)
                 {
-                    fieldsName += "saloonId,";
-                    fieldsValue += "@saloonId,";
+                    fieldsName += "SaloonId,";
+                    fieldsValue += "@SaloonId,";
                     paramsayi++;
                 }
 
                 if (GameNote != null)
                 {
-                    fieldsName += "gameNote,";
-                    fieldsValue += "@gameNote,";
+                    fieldsName += "GameNote,";
+                    fieldsValue += "@GameNote,";
                     paramsayi++;
                 }
 
                 if (GamePassed != null)
                 {
-                    fieldsName += "gamePassed,";
-                    fieldsValue += "@gamePassed,";
+                    fieldsName += "GamePassed,";
+                    fieldsValue += "@GamePassed,";
                     paramsayi++;
                 }
 
                 if (GameTime != null)
                 {
-                    fieldsName += "gameTime,";
-                    fieldsValue += "@gameTime,";
+                    fieldsName += "GameTime,";
+                    fieldsValue += "@GameTime,";
                     paramsayi++;
                 }
 
                 if (GamePlayerCount != null)
                 {
-                    fieldsName += "registrationTime,";
-                    fieldsValue += "@registrationTime,";
+                    fieldsName += "RegistrationTime,";
+                    fieldsValue += "@RegistrationTime,";
                     paramsayi++;
                 }
 
                 if (GameSubstituteCount != null)
                 {
-                    fieldsName += "gameSubstituteCount,";
-                    fieldsValue += "@gameSubstituteCount,";    
+                    fieldsName += "GameSubstituteCount,";
+                    fieldsValue += "@GameSubstituteCount,";    
                     paramsayi++;
                 }
 
@@ -92,48 +92,48 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SportId != null)
                 {
-                    fieldsName += "sportId=@sportId,";
+                    fieldsName += "SportId=@SportId,";
                     paramsayi++;
                 }
                 if (UserId != null)
                 {
-                    fieldsName += "userId=@userId,";
+                    fieldsName += "UserId=@UserId,";
                     paramsayi++;
                 }
 
                 if (SaloonId != null)
                 {
-                    fieldsName += "saloonId=@saloonId,";
+                    fieldsName += "SaloonId=@SaloonId,";
                     paramsayi++;
                 }
 
                 if (GameNote != null)
                 {
-                    fieldsName += "gameNote=@gameNote,";
+                    fieldsName += "GameNote=@GameNote,";
                     paramsayi++;
                 }
 
                 if (GamePassed != null)
                 {
-                    fieldsName += "gamePassed=@gamePassed,";
+                    fieldsName += "GamePassed=@GamePassed,";
                     paramsayi++;
                 }
 
                 if (GameTime != null)
                 {
-                    fieldsName += "gameTime=@gameTime,";
+                    fieldsName += "GameTime=@GameTime,";
                     paramsayi++;
                 }
 
                 if (GamePlayerCount != null)
                 {
-                    fieldsName += "gamePlayerCount=@gamePlayerCount,";
+                    fieldsName += "GamePlayerCount=@GamePlayerCount,";
                     paramsayi++;
                 }
 
                 if (GameSubstituteCount != null)
                 {
-                    fieldsName += "gameSubstituteCount=@gameSubstituteCount,";
+                    fieldsName += "GameSubstituteCount=@GameSubstituteCount,";
                     paramsayi++;
                 }
 
@@ -147,48 +147,48 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 if (SportId != null)
                 {
-                    sqlparam[i] = new SqlParameter("@sportId", SportId);
+                    sqlparam[i] = new SqlParameter("@SportId", SportId);
                     i++;
                 }
                 if (UserId != null)
                 {
-                    sqlparam[i] = new SqlParameter("@userId", UserId);
+                    sqlparam[i] = new SqlParameter("@UserId", UserId);
                     i++;
                 }
 
                 if (SaloonId != null)
                 {
-                    sqlparam[i] = new SqlParameter("@saloonId", SaloonId);
+                    sqlparam[i] = new SqlParameter("@SaloonId", SaloonId);
                     i++;
                 }
 
                 if (GameNote != null)
                 {
-                    sqlparam[i] = new SqlParameter("@gameNote", GameNote);
+                    sqlparam[i] = new SqlParameter("@GameNote", GameNote);
                     i++;
                 }
 
                 if (GamePassed != null)
                 {
-                    sqlparam[i] = new SqlParameter("@gamePassed", GamePassed);
+                    sqlparam[i] = new SqlParameter("@GamePassed", GamePassed);
                     i++;
                 }
 
                 if (GameTime != null)
                 {
-                    sqlparam[i] = new SqlParameter("@gameTime", GameTime);
+                    sqlparam[i] = new SqlParameter("@GameTime", GameTime);
                     i++;
                 }
 
                 if (GamePlayerCount != null)
                 {
-                    sqlparam[i] = new SqlParameter("@gamePlayerCount", GamePlayerCount);
+                    sqlparam[i] = new SqlParameter("@GamePlayerCount", GamePlayerCount);
                     i++;
                 }
 
                 if (GameSubstituteCount != null)
                 {
-                    sqlparam[i] = new SqlParameter("@gameSubstituteCount", GameSubstituteCount);
+                    sqlparam[i] = new SqlParameter("@GameSubstituteCount", GameSubstituteCount);
                     i++;
                 }
 
@@ -230,15 +230,15 @@ namespace AEDBGencTakimDataBaseEntity.DAO
 
             string[] columnNames = dt.Columns.Cast<DataColumn>().Select(x => x.ColumnName).ToArray();
 
-            if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(dt.Rows[0]["Id"].ToString());
-            if (columnNames.Contains("sportId")) entity.SportId = Convert.ToInt32(dt.Rows[0]["sportId"].ToString());
-            if (columnNames.Contains("userId")) entity.UserId = Convert.ToInt32(dt.Rows[0]["userId"].ToString());
-            if (columnNames.Contains("saloonId")) entity.SaloonId = Convert.ToInt32(dt.Rows[0]["saloonId"].ToString());
-            if (columnNames.Contains("gameNote")) entity.GameNote = dt.Rows[0]["gameNote"].ToString();
-            if (columnNames.Contains("gamePassed")) entity.GamePassed = Boolean.TryParse(dt.Rows[0]["gamePassed"].ToString(), out b) ? new Boolean?(b) : null;
-            if (columnNames.Contains("gameTime")) entity.GameTime = DateTime.TryParse(dt.Rows[0]["gameTime"].ToString(), out dti) ? new DateTime?(dti) : null;
-            if (columnNames.Contains("gamePlayerCount")) entity.GamePlayerCount = Int32.TryParse(dt.Rows[0]["gamePlayerCount"].ToString(), out ii) ? new int?(ii) : null;
-            if (columnNames.Contains("gameSubstituteCount")) entity.GameSubstituteCount = Int32.TryParse(dt.Rows[0]["gameSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
+            if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(dt.Rows[0]["Id"].ToString());
+            if (columnNames.Contains("SportId")) entity.SportId = Convert.ToInt32(dt.Rows[0]["SportId"].ToString());
+            if (columnNames.Contains("UserId")) entity.UserId = Convert.ToInt32(dt.Rows[0]["UserId"].ToString());
+            if (columnNames.Contains("SaloonId")) entity.SaloonId = Convert.ToInt32(dt.Rows[0]["SaloonId"].ToString());
+            if (columnNames.Contains("GameNote")) entity.GameNote = dt.Rows[0]["GameNote"].ToString();
+            if (columnNames.Contains("GamePassed")) entity.GamePassed = Boolean.TryParse(dt.Rows[0]["GamePassed"].ToString(), out b) ? new Boolean?(b) : null;
+            if (columnNames.Contains("GameTime")) entity.GameTime = DateTime.TryParse(dt.Rows[0]["GameTime"].ToString(), out dti) ? new DateTime?(dti) : null;
+            if (columnNames.Contains("GamePlayerCount")) entity.GamePlayerCount = Int32.TryParse(dt.Rows[0]["GamePlayerCount"].ToString(), out ii) ? new int?(ii) : null;
+            if (columnNames.Contains("GameSubstituteCount")) entity.GameSubstituteCount = Int32.TryParse(dt.Rows[0]["GameSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
 
             return entity;
         } // okuma işlemi bitiyor
@@ -259,15 +259,15 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             {
                 GameTblDAO entity = new GameTblDAO();
 
-                if (columnNames.Contains("id")) entity.Id = Convert.ToInt32(r["id"].ToString());
-                if (columnNames.Contains("sportId")) entity.SportId = Int32.TryParse(r["sportId"].ToString(), out ii) ? new int?(ii) : null;
-                if (columnNames.Contains("userId")) entity.UserId = Int32.TryParse(r["userId"].ToString(), out ii) ? new int?(ii) : null;
-                if (columnNames.Contains("saloonId")) entity.SaloonId = Int32.TryParse(r["saloonId"].ToString(), out ii) ? new int?(ii) : null;
-                if (columnNames.Contains("gameNote")) entity.GameNote = r["gameNote"].ToString(); 
-                if (columnNames.Contains("gamePassed")) entity.GamePassed = Boolean.TryParse(r["gamePassed"].ToString(), out b) ? new Boolean?(b) : null;
-                if (columnNames.Contains("gameTime")) entity.GameTime = (DateTime)(DateTime.TryParse(r["gameTime"].ToString(), out dti) ? new DateTime?(dti) : null);
-                if (columnNames.Contains("gamePlayerCount")) entity.GamePlayerCount = Int32.TryParse(r["gamePlayerCount"].ToString(), out ii) ? new int?(ii) : null;
-                if (columnNames.Contains("gameSubstituteCount")) entity.GameSubstituteCount = Int32.TryParse(r["gameSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
+                if (columnNames.Contains("Id")) entity.Id = Convert.ToInt32(r["Id"].ToString());
+                if (columnNames.Contains("SportId")) entity.SportId = Int32.TryParse(r["SportId"].ToString(), out ii) ? new int?(ii) : null;
+                if (columnNames.Contains("UserId")) entity.UserId = Int32.TryParse(r["UserId"].ToString(), out ii) ? new int?(ii) : null;
+                if (columnNames.Contains("SaloonId")) entity.SaloonId = Int32.TryParse(r["SaloonId"].ToString(), out ii) ? new int?(ii) : null;
+                if (columnNames.Contains("GameNote")) entity.GameNote = r["GameNote"].ToString(); 
+                if (columnNames.Contains("GamePassed")) entity.GamePassed = Boolean.TryParse(r["GamePassed"].ToString(), out b) ? new Boolean?(b) : null;
+                if (columnNames.Contains("GameTime")) entity.GameTime = (DateTime)(DateTime.TryParse(r["GameTime"].ToString(), out dti) ? new DateTime?(dti) : null);
+                if (columnNames.Contains("GamePlayerCount")) entity.GamePlayerCount = Int32.TryParse(r["GamePlayerCount"].ToString(), out ii) ? new int?(ii) : null;
+                if (columnNames.Contains("GameSubstituteCount")) entity.GameSubstituteCount = Int32.TryParse(r["GameSubstituteCount"].ToString(), out ii) ? new int?(ii) : null;
 
                 list.Add(entity);
             }

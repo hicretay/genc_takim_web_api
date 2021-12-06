@@ -1,0 +1,12 @@
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\bin\Release\net5.0\AEDBGencTakimDataBaseEntity.deps.json
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\bin\Release\net5.0\AEDBGencTakimDataBaseEntity.dll
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\bin\Release\net5.0\ref\AEDBGencTakimDataBaseEntity.dll
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\bin\Release\net5.0\AEDBGencTakimDataBaseEntity.pdb
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\AEDBGencTakimDataBaseEntity.csproj.AssemblyReference.cache
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\AEDBGencTakimDataBaseEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\AEDBGencTakimDataBaseEntity.AssemblyInfoInputs.cache
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\AEDBGencTakimDataBaseEntity.AssemblyInfo.cs
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\AEDBGencTakimDataBaseEntity.csproj.CoreCompileInputs.cache
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\AEDBGencTakimDataBaseEntity.dll
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\ref\AEDBGencTakimDataBaseEntity.dll
+C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\obj\Release\net5.0\AEDBGencTakimDataBaseEntity.pdb
