@@ -1,4 +1,5 @@
-﻿using AEDBGencTakimDataBaseEntity.Transactions;
+﻿using AEDBGencTakimDataBaseEntity.DAO;
+using AEDBGencTakimDataBaseEntity.Transactions;
 using GencTakimAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -27,6 +28,20 @@ namespace GencTakimAPI.Controllers
             try
             {
                 object userResult = new UserTbl().Select(userLogin.UserEmail, userLogin.UserPassword);
+                return userResult;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        [HttpPost("Login/kaydet")]
+        public object Kaydet([FromBody] userKaydet user)
+        {
+            try
+            {
+                var u = new UserTblDAO() { Id = user.Id, UserName=user.UserName};
+                object userResult = new UserTbl().Save(u);
                 return userResult;
             }
             catch (Exception ex)

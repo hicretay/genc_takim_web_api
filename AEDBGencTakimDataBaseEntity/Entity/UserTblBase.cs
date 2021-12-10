@@ -46,7 +46,7 @@ namespace AEDBGencTakimDataBaseEntity.Entities
             get => _UserTelephone; 
             set => _UserTelephone = value; 
         }
-        public int? Birthdate 
+        public int? Birthdate
         { 
             get => _Birthdate; 
             set => _Birthdate = value; 

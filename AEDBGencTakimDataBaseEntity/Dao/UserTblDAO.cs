@@ -62,7 +62,7 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                     paramsayi++;
                 }
 
-                if (Birthdate != 0)
+                if (Birthdate != null)
                 {
                     fieldsName += "Birthdate,";
                     fieldsValue += "@Birthdate,";
@@ -112,7 +112,7 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                     paramsayi++;
                 }
 
-                if (Birthdate != 0)
+                if (Birthdate != null)
                 {
                     fieldsName += "Birthdate=@Birthdate,";
                     paramsayi++;
@@ -163,7 +163,7 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                     i++;
                 }
 
-                if (Birthdate != 0)
+                if (Birthdate != null)
                 {
                     sqlparam[i] = new SqlParameter("@Birthdate", Birthdate);
                     i++;
