@@ -48,11 +48,6 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
           return new GameTblDAO().Select("select * from [GameTbl] where Id=@Id", new SqlParameter("@Id",Id));
         }
 
-        //public List<GameTblDAO> DataSource() 
-        //{
-        //   return new GameTblDAO().DataSource("select * from [GameTbl]");
-        //}
-
         public List<GameTblDAO> DataSource(int UserId) // kullanıcı id değeri gönderilecek, maçlar listesi alınacak
         {
             return new GameTblDAO().DataSource("select * from [GameTbl] where UserId=@UserId", new SqlParameter("UserId", UserId));
