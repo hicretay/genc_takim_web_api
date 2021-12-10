@@ -37,20 +37,27 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
 
             }
         }
+
+        public object DataSourceMac(int? ıd)
+        {
+            throw new NotImplementedException();
+        }
+
         public GameTblDAO Select(int Id) 
         {
           return new GameTblDAO().Select("select * from [GameTbl] where Id=@Id", new SqlParameter("@Id",Id));
         }
 
-        public List<GameTblDAO> DataSource() // kullanıcı id değeri gönderilecek, maçlar listesi alınacak
-        {
-           return new GameTblDAO().DataSource("select * from [GameTbl]");
-        }
-
-        //public List<GameTblDAO> DataSourceMac(int Id) // kullanıcı id değeri gönderilecek, maçlar listesi alınacak
+        //public List<GameTblDAO> DataSource() 
         //{
-        //    return new GameTblDAO().DataSource("select * from [GameTbl] where Id in (select GameId from  GameUserTbl where UserId=@userId)", new SqlParameter("@Id", Id), new SqlParameter("UserId", UserId));
+        //   return new GameTblDAO().DataSource("select * from [GameTbl]");
         //}
+
+        public List<GameTblDAO> DataSource(int UserId) // kullanıcı id değeri gönderilecek, maçlar listesi alınacak
+        {
+            return new GameTblDAO().DataSource("select * from [GameTbl] where UserId=@UserId", new SqlParameter("UserId", UserId));
+
+        }
     }
 }
 

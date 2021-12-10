@@ -35,12 +35,22 @@ namespace GencTakimAPI.Controllers
                 return ex.Message;
             }
         }
-        [HttpPost("Login/kaydet")]
-        public object Kaydet([FromBody] userKaydet user)
+
+        [HttpPost("Save")]
+        public object Kaydet([FromBody] saveUser user)
         {
             try
             {
-                var u = new UserTblDAO() { Id = user.Id, UserName=user.UserName};
+                var u = new UserTblDAO() 
+                { 
+                    Id = user.Id, 
+                    UserName=user.UserName, 
+                    UserEmail=user.UserEmail, 
+                    UserPassword=user.UserPassword, 
+                    UserTelephone=user.UserTelephone,
+                    Birthdate=user.Birthdate
+                };
+
                 object userResult = new UserTbl().Save(u);
                 return userResult;
             }

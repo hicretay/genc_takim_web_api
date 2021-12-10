@@ -8,28 +8,16 @@ namespace GencTakimAPI.Models
 {
     public class userLogin  
     {
-       
-        //public int Id { get; set; }
-        //public string UserName { get; set; }
         public string UserEmail { get; set; }   
         public string UserPassword { get; set; }
-        //public bool Active { get; set; }
-        //public string UserTelephone { get; set; }
-        //public int Birthdate { get; set; }
-        //public DateTime RegistrationTime { get; set; }  
-
     }
-    public class userKaydet
+    public class saveUser
     {
-
         public int? Id { get; set; }
         public string UserName { get; set; }
         public string UserEmail { get; set; }
         public string UserPassword { get; set; }
-        //public bool Active { get; set; }
         public string UserTelephone { get; set; }
-        public int? Birthdate { get; set; }
-        //public DateTime RegistrationTime { get; set; }  
-
+        public int? Birthdate { get; set; } 
     }
 }

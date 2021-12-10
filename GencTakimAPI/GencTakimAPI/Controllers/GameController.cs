@@ -1,4 +1,5 @@
 ﻿using AEDBGencTakimDataBaseEntity.Transactions;
+using GencTakimAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,12 +19,12 @@ namespace GencTakimAPI.Controllers
         }
 
 
-        [HttpPost("Games")]
-        public object PostGames()
+        [HttpPost("Games/List")]
+        public object PostGames([FromBody] games game)
         {
             try
             {
-                object userResult = new GameTbl().DataSource();
+                object userResult = new GameTbl().DataSource(game.UserId);
                 return userResult;
             }
             catch (Exception ex)
