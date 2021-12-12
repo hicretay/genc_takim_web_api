@@ -37,13 +37,13 @@ namespace GencTakimAPI.Controllers
         }
 
         [HttpPost("Save")]
-        public object Kaydet([FromBody] saveUser user)
+        public object SaveUser([FromBody] saveUser user)
         {
             try
             {
                 var u = new UserTblDAO() 
                 { 
-                    Id = user.Id, 
+       
                     UserName=user.UserName, 
                     UserEmail=user.UserEmail, 
                     UserPassword=user.UserPassword, 

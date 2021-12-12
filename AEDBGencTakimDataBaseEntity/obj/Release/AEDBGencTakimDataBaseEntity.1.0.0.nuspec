@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AEDBGencTakimDataBaseEntity</id>
+    <version>1.0.0</version>
+    <authors>AEDBGencTakimDataBaseEntity</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Swashbuckle.AspNetCore.Swagger" version="6.2.3" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore.SwaggerGen" version="6.2.3" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore.SwaggerUI" version="6.2.3" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.8.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\AEDBGencTakimDataBaseEntity\bin\Release\net5.0\AEDBGencTakimDataBaseEntity.dll" target="lib\net5.0\AEDBGencTakimDataBaseEntity.dll" />
+  </files>
+</package>
