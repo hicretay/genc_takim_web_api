@@ -28,7 +28,7 @@ namespace GencTakimAPI.Controllers
             try
             {
                 object userResult = new UserTbl().Select(userLogin.UserEmail, userLogin.UserPassword);
-                return userResult;
+                return new { succes = true, result = userResult };
             }
             catch (Exception ex)
             {
@@ -52,7 +52,7 @@ namespace GencTakimAPI.Controllers
                 };
 
                 object userResult = new UserTbl().Save(u);
-                return userResult;
+                return new { succes = true, result = userResult };
             }
             catch (Exception ex)
             {
