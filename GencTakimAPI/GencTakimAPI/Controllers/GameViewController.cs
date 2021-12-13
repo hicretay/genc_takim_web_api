@@ -24,7 +24,7 @@ namespace GencTakimAPI.Controllers
         {
             try
             {
-                object userResult = new GameView().DataSource(game.UserId);
+                object userResult = new GameView().DataSource(game.UserId, game.IsPassed);
                 return new {succes=true,result = userResult};
             }
             catch (Exception ex)

@@ -48,9 +48,9 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
           return new GameViewDAO().Select("select * from [GameView] where Id=@Id", new SqlParameter("@Id",Id));
         }
 
-        public List<GameViewDAO> DataSource(int UserId) // kullanıcı id değeri gönderilecek, maçlar listesi alınacak
+        public List<GameViewDAO> DataSource(int UserId, bool IsPassed) // kullanıcı id değeri gönderilecek, maçlar listesi alınacak
         {
-            return new GameViewDAO().DataSource("select * from [GameView] where UserId=@UserId", new SqlParameter("UserId", UserId));
+            return new GameViewDAO().DataSource("select * from [GameView] where UserId=@UserId and IsPassed=@IsPassed", new SqlParameter("UserId", UserId), new SqlParameter("IsPassed", IsPassed));
 
         }
     }

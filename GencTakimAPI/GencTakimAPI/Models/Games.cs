@@ -8,5 +8,6 @@ namespace GencTakimAPI.Models
     public class games
     {
         public int UserId { get; set; } 
+        public bool IsPassed { get; set; }  
     }
 }
