@@ -21,7 +21,8 @@ namespace AEDBGencTakimDataBaseEntity.Entities
         private string _SportName = null;
         private string _SaloonAddress = null;
         private string _SaloonFeature = null;
-        private string _SaloonName = null;  
+        private string _SaloonName = null;
+        private bool? _IsPassed = false;
 
         public int? Id
         {
@@ -89,6 +90,11 @@ namespace AEDBGencTakimDataBaseEntity.Entities
         { 
             get => _SaloonName; 
             set => _SaloonName = value; 
+        }
+        public bool? IsPassed
+        {
+            get => _IsPassed;
+            set => _IsPassed = value;
         }
     }
 }

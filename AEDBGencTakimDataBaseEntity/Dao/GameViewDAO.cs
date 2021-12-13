@@ -105,6 +105,12 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                     fieldsValue += "@SaloonName,";
                     paramsayi++;
                 }
+                if (IsPassed != null)
+                {
+                    fieldsName += "IsPassed,";
+                    fieldsValue += "@IsPassed,";
+                    paramsayi++;
+                }
 
                 fieldsName = fieldsName.Remove(fieldsName.Length - 1, 1);
                 fieldsValue = fieldsValue.Remove(fieldsValue.Length - 1, 1);
@@ -179,6 +185,11 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                 if (SaloonName != null)
                 {
                     fieldsName += "SaloonName=@SaloonName,";
+                    paramsayi++;
+                }
+                if (IsPassed != null)
+                {
+                    fieldsName += "IsPassed=@IsPassed,";
                     paramsayi++;
                 }
 
@@ -260,6 +271,12 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                     i++;
                 }
 
+                if (IsPassed != null)
+                {
+                    sqlparam[i] = new SqlParameter("@IsPassed", IsPassed);
+                    i++;
+                }
+
             }
 
             if (this.Id == 0)
@@ -311,6 +328,7 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             if (columnNames.Contains("SaloonAddress")) entity.SaloonAddress = dt.Rows[0]["SaloonAddress"].ToString();
             if (columnNames.Contains("SaloonFeature")) entity.SaloonFeature = dt.Rows[0]["SaloonFeature"].ToString();
             if (columnNames.Contains("SaloonName")) entity.SaloonName = dt.Rows[0]["SaloonName"].ToString();
+            if (columnNames.Contains("IsPassed")) entity.IsPassed = Boolean.TryParse(dt.Rows[0]["IsPassed"].ToString(), out b) ? new Boolean?(b) : null;
 
 
 
@@ -347,6 +365,7 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                 if (columnNames.Contains("SaloonAddress")) entity.SaloonAddress = r["SaloonAddress"].ToString();
                 if (columnNames.Contains("SaloonFeature")) entity.SaloonFeature = r["SaloonFeature"].ToString();
                 if (columnNames.Contains("SaloonName")) entity.SaloonName = r["SaloonName"].ToString();
+                if (columnNames.Contains("IsPassed")) entity.IsPassed = Boolean.TryParse(r["IsPassed"].ToString(), out b) ? new Boolean?(b) : null;
 
                 list.Add(entity);
             }
