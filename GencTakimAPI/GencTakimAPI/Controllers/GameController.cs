@@ -19,18 +19,18 @@ namespace GencTakimAPI.Controllers
         }
 
 
-        [HttpPost("Games/List")]
-        public object PostGames([FromBody] games game)
-        {
-            try
-            {
-                object userResult = new GameTbl().DataSource(game.UserId);
-                return userResult;
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
+        //[HttpPost("Games/List")]
+        //public object PostGames([FromBody] games game)
+        //{
+        //    try
+        //    {
+        //        object userResult = new GameTbl().DataSource(game.UserId);
+        //        return userResult;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return ex.Message;
+        //    }
+        //}
     }
 }

@@ -9,23 +9,37 @@ using System.Threading.Tasks;
 
 namespace GencTakimAPI.Controllers
 {
-    public class GameViewController : ControllerBase
+    public class GamesListController : ControllerBase
     {
-        private readonly ILogger<GameViewController> _logger;
+        private readonly ILogger<GamesListController> _logger;
 
-        public GameViewController(ILogger<GameViewController> logger)
+        public GamesListController(ILogger<GamesListController> logger)
         {
             _logger = logger;
         }
 
 
-        [HttpPost("UserGame/List")]
-        public object PostGames([FromBody] games game)
+        [HttpPost("Games/UserGameList")]
+        public object PostUserGames([FromBody] games game)  
         {
             try
             {
                 object userResult = new GameView().DataSource(game.UserId, game.IsPassed);
                 return new {succes=true,result = userResult};
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        [HttpPost("Games/AllMatchesList")]
+        public object PostAllGames()   
+        {
+            try
+            {
+                object userResult = new GameView().DataSource();
+                return new { succes = true, result = userResult };
             }
             catch (Exception ex)
             {

@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\hiicr\Documents\genc_takim_web_api\genc_takim_web_api\GencTakimAPI\GencTakimAPI\bin\Release\net5.0\publish\</_PublishTargetUrl>
-    <History>True|2021-12-13T17:15:07.9039975Z;True|2021-12-13T15:21:35.3074021+03:00;True|2021-12-13T11:11:49.1883825+03:00;True|2021-12-13T01:20:44.2458621+03:00;True|2021-12-12T17:41:35.2916817+03:00;False|2021-12-12T17:38:06.5600339+03:00;True|2021-12-06T14:43:37.2659948+03:00;False|2021-12-06T14:37:31.1172858+03:00;True|2021-12-06T14:32:38.3247153+03:00;</History>
+    <History>True|2021-12-14T10:12:30.9661012Z;True|2021-12-13T20:15:07.9039975+03:00;True|2021-12-13T15:21:35.3074021+03:00;True|2021-12-13T11:11:49.1883825+03:00;True|2021-12-13T01:20:44.2458621+03:00;True|2021-12-12T17:41:35.2916817+03:00;False|2021-12-12T17:38:06.5600339+03:00;True|2021-12-06T14:43:37.2659948+03:00;False|2021-12-06T14:37:31.1172858+03:00;True|2021-12-06T14:32:38.3247153+03:00;</History>
   </PropertyGroup>
 </Project>
