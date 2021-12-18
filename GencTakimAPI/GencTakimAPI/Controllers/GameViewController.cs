@@ -46,5 +46,19 @@ namespace GencTakimAPI.Controllers
                 return ex.Message;
             }
         }
+
+        [HttpPost("Games/ComingMatchesList")]
+        public object PostComingGames([FromBody] comingGames game)
+        {
+            try
+            {
+                object userResult = new GameView().DataSource(game.IsPassed);
+                return new { succes = true, result = userResult };
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }

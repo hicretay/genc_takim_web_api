@@ -54,6 +54,12 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                     fieldsValue += "@IsSubstitute,";
                     paramsayi++;
                 }
+                if (UserLocation != null)
+                {
+                    fieldsName += "UserLocation,";
+                    fieldsValue += "@UserLocation,";
+                    paramsayi++;
+                }
 
                 fieldsName = fieldsName.Remove(fieldsName.Length - 1, 1);
                 fieldsValue = fieldsValue.Remove(fieldsValue.Length - 1, 1);
@@ -82,6 +88,12 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                 if (IsSubstitute != null)
                 {
                     fieldsName += "IsSubstitute=@IsSubstitute,";
+                    paramsayi++;
+                }
+
+                if (UserLocation != null)
+                {
+                    fieldsName += "UserLocation=@UserLocation,";
                     paramsayi++;
                 }
 
@@ -119,7 +131,13 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                     i++;
                 }
 
-                
+                if (UserLocation != null)
+                {
+                    sqlparam[i] = new SqlParameter("@UserLocation", UserLocation);
+                    i++;
+                }
+
+
             }
 
             if (this.Id == 0)
@@ -163,6 +181,7 @@ namespace AEDBGencTakimDataBaseEntity.DAO
             if (columnNames.Contains("GameId")) entity.GameId = Convert.ToInt32(dt.Rows[0]["GameId"].ToString());
             if (columnNames.Contains("GamePlayTime")) entity.GamePlayTime = DateTime.TryParse(dt.Rows[0]["GamePlayTime"].ToString(), out dti) ? new DateTime?(dti) : null;
             if (columnNames.Contains("IsSubstitute")) entity.IsSubstitute = Boolean.TryParse(dt.Rows[0]["IsSubstitute"].ToString(),out b)? new Boolean?(b):null;
+            if (columnNames.Contains("UserLocation")) entity.UserLocation = Convert.ToInt32(dt.Rows[0]["UserLocation"].ToString());
 
             return entity;
         } // okuma işlemi bitiyor
@@ -188,6 +207,7 @@ namespace AEDBGencTakimDataBaseEntity.DAO
                 if (columnNames.Contains("GameId")) entity.GameId = Convert.ToInt32(r["GameId"].ToString());
                 if (columnNames.Contains("GamePlayTime")) entity.GamePlayTime = DateTime.TryParse(r["GamePlayTime"].ToString(), out dti) ? new DateTime?(dti) : null;
                 if (columnNames.Contains("IsSubstitute")) entity.IsSubstitute = Boolean.TryParse(r["IsSubstitute"].ToString(), out b) ? new Boolean?(b) : null;
+                if (columnNames.Contains("UserLocation")) entity.UserLocation = Convert.ToInt32(r["UserLocation"].ToString());
 
                 list.Add(entity);
             }

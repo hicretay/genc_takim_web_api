@@ -10,4 +10,23 @@ namespace GencTakimAPI.Models
         public int UserId { get; set; } 
         public bool IsPassed { get; set; }  
     }
+
+    public class comingGames
+    {
+        public bool IsPassed { get; set; }
+    }
+
+    public class addGame
+    {
+        
+        public int SportId { get; set; }
+        public int UserId { get; set; }
+        public int SaloonId { get; set; }
+        public String GameNote { get; set; }
+        public bool GamePassed { get; set; }
+        public DateTime GameTime { get; set; }     
+        public int GamePlayerCount { get; set; }
+        public int GameSubstituteCount { get; set; }    
+
+    }
 }

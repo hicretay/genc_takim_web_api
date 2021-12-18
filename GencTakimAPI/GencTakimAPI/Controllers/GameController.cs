@@ -1,4 +1,5 @@
-﻿using AEDBGencTakimDataBaseEntity.Transactions;
+﻿using AEDBGencTakimDataBaseEntity.DAO;
+using AEDBGencTakimDataBaseEntity.Transactions;
 using GencTakimAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -32,5 +33,31 @@ namespace GencTakimAPI.Controllers
         //        return ex.Message;
         //    }
         //}
+
+        [HttpPost("Match/Save")]
+        public object SaveGame([FromBody] addGame userGame) 
+        {
+            try
+            {
+                var u = new GameTblDAO()
+                {
+                    UserId = userGame.UserId,
+                    SportId = userGame.SportId,
+                    SaloonId = userGame.SaloonId,
+                    GameNote = userGame.GameNote,
+                    GamePassed = userGame.GamePassed,
+                    GameTime = userGame.GameTime,
+                    GamePlayerCount = userGame.GamePlayerCount,
+                    GameSubstituteCount = userGame.GameSubstituteCount
+                };
+
+                object userResult = new GameTbl().Save(u);
+                return new { succes = true, result = userResult };
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }

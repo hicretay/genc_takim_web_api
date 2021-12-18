@@ -71,8 +71,8 @@ namespace AEDBGencTakimDataBaseEntity.DAO
 
                 if (GamePlayerCount != null)
                 {
-                    fieldsName += "RegistrationTime,";
-                    fieldsValue += "@RegistrationTime,";
+                    fieldsName += "GamePlayerCount,";
+                    fieldsValue += "@GamePlayerCount,";
                     paramsayi++;
                 }
 

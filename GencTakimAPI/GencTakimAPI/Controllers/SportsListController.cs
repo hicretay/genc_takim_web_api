@@ -26,7 +26,7 @@ namespace GencTakimAPI.Controllers
             try
             {
                 object userResult = new SportTbl().DataSource();
-                return userResult;
+                return new { succes = true, result = userResult };
             }
             catch (Exception ex)
             {
