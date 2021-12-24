@@ -11,6 +11,11 @@ namespace GencTakimAPI.Models
         public bool IsPassed { get; set; }  
     }
 
+    public class deleteUserGame
+    {
+        public int Id { get; set; }
+    }
+
     public class comingGames
     {
         public bool IsPassed { get; set; }
@@ -27,6 +32,16 @@ namespace GencTakimAPI.Models
         public DateTime GameTime { get; set; }     
         public int GamePlayerCount { get; set; }
         public int GameSubstituteCount { get; set; }    
+
+    }
+
+    public class addUserGame
+    {
+
+        public int GameId { get; set; }
+        public int UserId { get; set; }
+        public int UserLocation { get; set; }
+        public bool IsSubstitute { get; set; }
 
     }
 }

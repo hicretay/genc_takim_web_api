@@ -20,27 +20,41 @@ namespace GencTakimAPI.Controllers
         }
 
 
-        //[HttpPost("Match/Save")]
-        //public object SaveUser([FromBody] addGame userGame)
-        //{
-        //    try
-        //    {
-        //        var u = new GameUserTblDAO()
-        //        {
-        //            UserId = userGame.UserId,
-        //            GameId = userGame.GameId,
-        //            GamePlayTime = userGame.GamePlayTime,
-        //            IsSubstitute = userGame.IsSubstitute,
-        //            UserLocation = userGame.UserLocation
-        //        };
+        [HttpPost("UserMatch/Delete")]
+        public object DeleteUserGames([FromBody] deleteUserGame game)
+        {
+            try
+            {
+                object userResult = new GameUserTbl().Delete(game.Id);
+                return new { succes = true, result = userResult };
+            }
 
-        //        object userResult = new GameUserTbl().Save(u);
-        //        return new { succes = true, result = userResult };
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return ex.Message;
-        //    }
-        //}
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        [HttpPost("UserMatch/Save")]
+        public object SaveGame([FromBody] addUserGame userGame)
+        {
+            try
+            {
+                var u = new GameUserTblDAO()
+                {
+                    UserId = userGame.UserId,
+                    GameId = userGame.GameId,
+                    UserLocation = userGame.UserLocation,
+                    IsSubstitute = userGame.IsSubstitute,
+                };
+
+                object userResult = new GameUserTbl().Save(u);
+                return new { succes = true, result = userResult };
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }

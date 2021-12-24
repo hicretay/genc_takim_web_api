@@ -12,7 +12,6 @@ namespace AEDBGencTakimDataBaseEntity.Entities
         private int? _Id = null;
         private int? _UserId = null;
         private int? _GameId = null;
-        private DateTime? _GamePlayTime;
         private bool? _IsSubstitute = false;
         private int? _UserLocation = null;
 
@@ -31,11 +30,6 @@ namespace AEDBGencTakimDataBaseEntity.Entities
         { 
             get => _GameId;
             set => _GameId = value; 
-        }
-        public DateTime? GamePlayTime 
-        { 
-            get => _GamePlayTime; 
-            set => _GamePlayTime = value; 
         }
         public bool? IsSubstitute 
         { 
