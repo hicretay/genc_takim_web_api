@@ -25,6 +25,7 @@ namespace AEDBGencTakimDataBaseEntity.Entities
         private bool? _IsPassed = false;
         private int? _UserLocation = null;
         private bool? _IsSubstitute = false;
+        private int? _GameUserId = null;    
         public int? Id
         {
             get { return _Id; }
@@ -106,6 +107,11 @@ namespace AEDBGencTakimDataBaseEntity.Entities
         { 
             get => _IsSubstitute; 
             set => _IsSubstitute = value; 
+        }
+        public int? GameUserId 
+        { 
+            get => _GameUserId; 
+            set => _GameUserId = value; 
         }
     }
 }

@@ -51,6 +51,11 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
         {
             return new UserTblDAO().Select("select * from [UserTbl] where UserEmail=@userEmail and UserPassword=@userPassword", new SqlParameter("@userEmail", userEmail), new SqlParameter("@userPassword", userPassword));
         }
+
+        public UserTblDAO SelectDifferentUser(string userEmail)
+        {
+            return new UserTblDAO().Select("select * from [UserTbl] where UserEmail=@userEmail", new SqlParameter("@userEmail", userEmail));
+        }
     }
 }
 

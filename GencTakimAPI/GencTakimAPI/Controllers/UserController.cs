@@ -41,6 +41,7 @@ namespace GencTakimAPI.Controllers
         {
             try
             {
+               
                 var u = new UserTblDAO() 
                 { 
        
@@ -51,8 +52,19 @@ namespace GencTakimAPI.Controllers
                     Birthdate=user.Birthdate
                 };
 
-                object userResult = new UserTbl().Save(u);
-                return new { succes = true, result = userResult };
+                object differentUser = new UserTbl().SelectDifferentUser(user.UserEmail);
+
+                
+                if(differentUser == null)
+                {
+                    object userResult = new UserTbl().Save(u);
+                    return new { succes = true, result = userResult };
+                }
+                else
+                {
+                    return "Kullanıcı daha önce kayıt olmuş !";
+                }
+                
             }
             catch (Exception ex)
             {

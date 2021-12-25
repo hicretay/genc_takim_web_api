@@ -42,6 +42,11 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
           return new GameUserTblDAO().Select("select * from [GameUserTbl] where Id=@Id", new SqlParameter("@Id",Id));
         }
 
+        public GameUserTblDAO SelectDifferent(int Id)
+        {
+            return new GameUserTblDAO().Select("select * from [GameUserTbl] where Id=@Id", new SqlParameter("@Id", Id));
+        }
+
         public List<GameUserTblDAO> DataSource()
         {
            return new GameUserTblDAO().DataSource("select * from [GameUserTbl]");
