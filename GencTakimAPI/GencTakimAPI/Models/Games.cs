@@ -44,4 +44,16 @@ namespace GencTakimAPI.Models
         public bool IsSubstitute { get; set; }
 
     }
+
+    public class gameUserL
+    {
+        //public int UserId { get; set; }
+        public int GameId { get; set; }
+    }
+
+    public class locationUser
+    {
+        public int UserLocation { get; set; }
+    }
+
 }

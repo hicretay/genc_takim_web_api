@@ -62,7 +62,7 @@ namespace GencTakimAPI.Controllers
                 }
                 else
                 {
-                    return "Kullanıcı daha önce kayıt olmuş !";
+                    return new { succes = true, message = "Kullanıcı daha önce kayıt olmuş !" };
                 }
                 
             }

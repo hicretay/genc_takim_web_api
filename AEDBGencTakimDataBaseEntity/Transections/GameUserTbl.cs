@@ -51,6 +51,16 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
         {
            return new GameUserTblDAO().DataSource("select * from [GameUserTbl]");
         }
+
+        public GameUserTblDAO SelectDifferentUserLocation(int userId, int gameId)
+        {
+            return new GameUserTblDAO().Select("select * from [GameUserTbl] where UserId=@UserId and GameId=@GameId", new SqlParameter("@userId", userId), new SqlParameter("@gameId", gameId));
+        }
+
+        public GameUserTblDAO SelectDifLocation(int userLocation, int gameId)   
+        {
+            return new GameUserTblDAO().Select("select * from [GameUserTbl] where UserLocation=@UserLocation and GameId=@GameId", new SqlParameter("@UserLocation", userLocation), new SqlParameter("@gameId", gameId));
+        }
     }
 }
 

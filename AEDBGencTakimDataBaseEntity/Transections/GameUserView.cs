@@ -63,6 +63,12 @@ namespace AEDBGencTakimDataBaseEntity.Transactions
         {
             return new GameUserViewDAO().DataSource("select * from [GameUserView] where IsPassed=@IsPassed", new SqlParameter("IsPassed", IsPassed));
         }
+
+        public List<GameUserViewDAO> ExistLocation(int Id)
+        {
+            return new GameUserViewDAO().DataSource("select * from [GameUserView] where Id=@Id", new SqlParameter("@Id", Id));
+        }
+
     }
 }
 
